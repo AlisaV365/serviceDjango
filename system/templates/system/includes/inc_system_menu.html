@@ -1,0 +1,17 @@
+{% load my_tags %}
+{% load static %}
+
+{% block content %}
+<div class="row">
+        <div class="col-mb">
+            <div class="card md-4 box-shadow">
+                <div class="card-body">
+                    <p class="card-text">{{ object.name }}</p>
+                    <p>{{ object.description|safe|truncatechars:100 }}</p>
+                    {% if not forloop.last %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+</div>
+{% endblock %}
